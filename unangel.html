@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El ángel que el universo me envió 💙✨</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      color: white;
+      text-align: center;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      overflow-x: hidden;
+      cursor: pointer;
+      position: relative;
+      height: 100vh;
+    }
+
+    /* Partículas (estrellas) */
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 5s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.2; }
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5em;
+      padding: 0 20px;
+      color: #fff;
+      text-shadow: 0 0 10px #69aaff, 0 0 20px #69aaff;
+      z-index: 2;
+      position: relative;
+    }
+
+    .carta {
+      max-width: 900px;
+      margin: 40px auto;
+      font-size: 1.1em;
+      line-height: 1.7;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(105, 170, 255, 0.4);
+      backdrop-filter: blur(8px);
+      z-index: 2;
+      position: relative;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .carta:hover {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 30px rgba(105, 170, 255, 0.6);
+      transform: scale(1.02);
+      transition: all 0.3s ease-in-out;
+    }
+
+    footer {
+      margin: 50px 0;
+      font-size: 0.9em;
+      color: #a0a0a0;
+      z-index: 2;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <h1>El ángel que el universo me envió 💙✨</h1>
+
+  <div class="carta">
+    <p>Llegaste en un momento muy difícil de mi vida y aun así te quedaste. Sin dudas, llegaste en mi peor versión y, aunque todavía no entiendo por qué, decidiste quedarte. Eso hizo que tuvieras mi lealtad absoluta desde el primer momento, porque supiste ver en mí algo positivo aun en medio de lo peor.</p>
+
+    <p>Pasaron un montón de cosas de por medio, pero en el fondo pienso que todo sucedió para que yo pudiera distraerme del dolor que sentía y aprender a valorar los momentos de alegría contigo. Gracias por ser parte de mi vida y por quedarte cuando nadie más lo hizo.</p>
+
+    <p>Te quiero muchísimo hoy y siempre, no importa si estamos juntos o no. Nunca voy a olvidar el papel fundamental que cumpliste en mi vida, y siempre estaré agradecida por tu amor y apoyo.</p>
+  </div>
+
+  <footer>💫 Con todo mi cariño, Magali 💫</footer>
+
+  <!-- Música de fondo -->
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Partículas de estrellas -->
+  <script>
+    const numStars = 100;
+    for (let i = 0; i < numStars; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = Math.random() * window.innerHeight + 'px';
+      star.style.left = Math.random() * window.innerWidth + 'px';
+      star.style.width = star.style.height = Math.random() * 3 + 1 + 'px';
+      star.style.animationDuration = 2 + Math.random() * 3 + 's';
+      document.body.appendChild(star);
+    }
+  </script>
+</body>
+</html>
