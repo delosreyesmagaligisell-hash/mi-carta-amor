@@ -1,114 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El ángel que el universo me envió 💙✨</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Georgia', serif;
-      color: white;
-      text-align: center;
-      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-      overflow-x: hidden;
-      cursor: pointer;
-      position: relative;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El ángel que me envió el universo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-color: #000033;
+            background-image:
+                radial-gradient(circle at 10% 20%, #001f40 0%, #000033 100%),
+                radial-gradient(circle at 90% 80%, rgba(255,255,255,0.2) 1%, rgba(255,255,255,0) 2%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 1%, rgba(255,255,255,0) 3%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.4) 1%, rgba(255,255,255,0) 4%),
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.5) 1%, rgba(255,255,255,0) 5%);
+            background-attachment: fixed;
+            background-size: 1500px 1500px;
+            animation: moveStars 100s linear infinite;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
 
-    /* Partículas (estrellas) */
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: twinkle 5s infinite;
-    }
+        @keyframes moveStars {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 100%;
+            }
+        }
 
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 0.2; }
-    }
+        .heart {
+            position: absolute;
+            font-size: 2em;
+            color: #ff6699;
+            text-shadow: 0 0 10px #ff6699, 0 0 20px #ff6699, 0 0 30px #ff6699;
+            animation: floatHearts 5s ease-in-out infinite;
+            pointer-events: none;
+        }
 
-    h1 {
-      margin-top: 40px;
-      font-size: 2.5em;
-      padding: 0 20px;
-      color: #fff;
-      text-shadow: 0 0 10px #69aaff, 0 0 20px #69aaff;
-      z-index: 2;
-      position: relative;
-    }
+        .heart:nth-child(1) { top: 10%; left: 5%; animation-delay: 1s; }
+        .heart:nth-child(2) { top: 30%; left: 15%; animation-delay: 2s; }
+        .heart:nth-child(3) { top: 50%; left: 25%; animation-delay: 3s; }
+        .heart:nth-child(4) { top: 70%; left: 35%; animation-delay: 4s; }
+        .heart:nth-child(5) { top: 90%; left: 45%; animation-delay: 5s; }
+        .heart:nth-child(6) { top: 20%; right: 5%; animation-delay: 1.5s; }
+        .heart:nth-child(7) { top: 40%; right: 15%; animation-delay: 2.5s; }
+        .heart:nth-child(8) { top: 60%; right: 25%; animation-delay: 3.5s; }
+        .heart:nth-child(9) { top: 80%; right: 35%; animation-delay: 4.5s; }
+        .heart:nth-child(10) { top: 10%; right: 45%; animation-delay: 0.5s; }
 
-    .carta {
-      max-width: 900px;
-      margin: 40px auto;
-      font-size: 1.1em;
-      line-height: 1.7;
-      padding: 25px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(105, 170, 255, 0.4);
-      backdrop-filter: blur(8px);
-      z-index: 2;
-      position: relative;
-    }
+        @keyframes floatHearts {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+            100% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+        }
+        
+        .card-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            text-align: center;
+            border: 2px solid #fff;
+            position: relative;
+            z-index: 1;
+        }
 
-    p {
-      margin-bottom: 20px;
-    }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+        }
 
-    .carta:hover {
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 0 30px rgba(105, 170, 255, 0.6);
-      transform: scale(1.02);
-      transition: all 0.3s ease-in-out;
-    }
-
-    footer {
-      margin: 50px 0;
-      font-size: 0.9em;
-      color: #a0a0a0;
-      z-index: 2;
-      position: relative;
-    }
-  </style>
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px #000;
+        }
+    </style>
 </head>
 <body>
-  <h1>El ángel que el universo me envió 💙✨</h1>
 
-  <div class="carta">
-    <p>Llegaste en un momento muy difícil de mi vida y aun así te quedaste. Sin dudas, llegaste en mi peor versión y, aunque todavía no entiendo por qué, decidiste quedarte. Eso hizo que tuvieras mi lealtad absoluta desde el primer momento, porque supiste ver en mí algo positivo aun en medio de lo peor.</p>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
 
-    <p>Pasaron un montón de cosas de por medio, pero en el fondo pienso que todo sucedió para que yo pudiera distraerme del dolor que sentía y aprender a valorar los momentos de alegría contigo. Gracias por ser parte de mi vida y por quedarte cuando nadie más lo hizo.</p>
+    <div class="card-container">
+        <h1>El ángel que me envió el universo</h1>
+        <p>Llegaste en un momento muy difícil de mi vida y aun así te quedaste. Sin dudas, llegaste en mi peor versión y, aunque todavía no entiendo por qué, decidiste quedarte. Eso hizo que tuvieras mi lealtad absoluta desde el primer momento, porque supiste ver en mí algo positivo aun en medio de lo peor.</p>
+        <p>Pasaron un montón de cosas de por medio, pero en el fondo pienso que todo sucedió para que yo pudiera distraerme del dolor que llevaba dentro. Hoy siento que superé ese dolor, y vos estuviste en todo ese proceso, como también vas a seguir siendo parte cuando las cosas empiezan a mejorar. Vos mereces estar en mi mejor versión, lo mereces más que muchos en mi vida.</p>
+        <p>Antes de que nos conociéramos, si había algo que le pedía al universo era que me mandara un ángel, porque sola no podía. Y al instante llegaste vos. Hasta hace unos meses atrás todavía no aceptaba que fueras vos, pero entendí que sí lo eras, porque me acompañaste. Muchas veces te dije las cosas malas que veía en vos, y pocas veces las buenas. Hoy quiero aprovechar a decirte algunas de ellas: sos una persona muy hermosa por diversas razones. Por cómo querés a tu mamá, por la lealtad que tenés con tus amigos, por el amor que sentís hacia los animales, por evitar siempre hacer el mal y por la buena intención que tenés en cada acción.</p>
+        <p>Hoy en día sos una excelente compañía para mí. Sabés acompañar, buscás siempre soluciones a mis problemas dentro de tus posibilidades, y estás intentando crecer económica y personalmente por amor a nosotros. El amor siempre te va a ayudar a crecer. Cuando no puedas hacerlo por vos mismo, va a llegar alguien que te motive a hacerlo. Y yo sé que vos vas a poder con todo, porque tu cabeza está enfocada en cosas importantes, mientras la mayoría de las personas nos distraemos con boludeces. Yo te veo tan enfocado en lo que realmente vale la pena, que aprendo muchísimo de vos y te admiro. Y debería decírtelo más seguido, no sé por qué no lo hago. Seguramente sea bastante injusta por momentos, sin dudas.</p>
+        <p>Te quiero muchísimo, hoy y siempre. No importa si estamos juntos o no, nunca voy a olvidar el papel fundamental que cumpliste en mi vida. Nunca voy a dejar de agradecerte por quererme así.</p>
+    </div>
 
-    <p>Te quiero muchísimo hoy y siempre, no importa si estamos juntos o no. Nunca voy a olvidar el papel fundamental que cumpliste en mi vida, y siempre estaré agradecida por tu amor y apoyo.</p>
-  </div>
-
-  <footer>💫 Con todo mi cariño, Magali 💫</footer>
-
-  <!-- Música de fondo -->
-  <audio autoplay loop>
-    <source src="musica.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- Partículas de estrellas -->
-  <script>
-    const numStars = 100;
-    for (let i = 0; i < numStars; i++) {
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.style.top = Math.random() * window.innerHeight + 'px';
-      star.style.left = Math.random() * window.innerWidth + 'px';
-      star.style.width = star.style.height = Math.random() * 3 + 1 + 'px';
-      star.style.animationDuration = 2 + Math.random() * 3 + 's';
-      document.body.appendChild(star);
-    }
-  </script>
 </body>
 </html>
